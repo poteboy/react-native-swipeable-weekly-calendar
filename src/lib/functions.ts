@@ -10,7 +10,7 @@ import {
   subWeeks,
 } from 'date-fns';
 
-export const createLocalWeek = (lang: Language): Locale => {
+export const createLocalWeek = (lang?: Language): Locale => {
   switch (lang) {
     case 'ja':
       return ja;

@@ -2,10 +2,14 @@
   "name": "react-native-swipeable-weekly-calendar",
   "version": "1.0.0",
   "description": "0.0.1",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "poteboy",
   "license": "MIT",
-  "devDependencies": {
+  "private": false,
+  "scripts": {
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
+  },
+  "dependencies": {
     "@types/date-fns": "^2.6.0",
     "@types/react-native": "^0.66.14",
     "@typescript-eslint/eslint-plugin": "^5.10.0",

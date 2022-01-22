@@ -85,6 +85,7 @@ export const CalendarComponent: FC<CalendarProps> = memo(
       <View
         style={{
           backgroundColor: colors.white,
+          paddingTop: 5,
           paddingBottom: 10,
           ...styles.shadow,
         }}
