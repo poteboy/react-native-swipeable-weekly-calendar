@@ -4,6 +4,7 @@ import {
   createLocalWeek,
   createWeekList,
   screenWidth,
+  colors,
 } from '../lib';
 import { View, Text } from 'react-native';
 
@@ -34,7 +35,19 @@ export const Header: FC<CalendarHeaderProps> = memo(({ language }) => {
               alignItems: 'center',
             }}
           >
-            <Text>{w}</Text>
+            <Text
+              style={{
+                color:
+                  index === 0
+                    ? colors.sunday
+                    : index === 6
+                    ? colors.saturday
+                    : colors.defaultWeekColor,
+                fontSize: 12,
+              }}
+            >
+              {w}
+            </Text>
           </View>
         );
       })}

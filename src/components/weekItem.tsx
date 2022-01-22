@@ -1,7 +1,7 @@
 import React, { FC, memo, useCallback } from 'react';
-import { screenWidth, styles, WeekItemProps } from '../lib';
+import { styles, WeekItemProps, itemWidht, colors } from '../lib';
 import { View, TouchableOpacity, Text } from 'react-native';
-import { getDate } from 'date-fns';
+import { getDate, getDay } from 'date-fns';
 
 export const WeekItem: FC<WeekItemProps> = memo(
   ({ date, selectedDate, onSelectDate, selectedColor }) => {
@@ -10,10 +10,12 @@ export const WeekItem: FC<WeekItemProps> = memo(
       onSelectDate(date);
     }, [date, onSelectDate]);
 
-    const bgColor = selectedColor ?? 'lightblue';
+    const bgColor = selectedColor ?? colors.defaultBg;
 
     return (
-      <View style={{ width: screenWidth / 7, alignItems: 'center' }}>
+      <View
+        style={{ width: itemWidht, alignItems: 'center', paddingVertical: 5 }}
+      >
         <TouchableOpacity onPress={selectDate}>
           <Text
             style={
@@ -22,8 +24,17 @@ export const WeekItem: FC<WeekItemProps> = memo(
                     ...styles.eachDay,
                     backgroundColor: bgColor,
                     borderColor: bgColor,
+                    color: colors.white,
                   }
-                : { ...styles.eachDay }
+                : {
+                    ...styles.eachDay,
+                    color:
+                      getDay(date) === 0
+                        ? colors.sunday
+                        : getDay(date) === 6
+                        ? colors.saturday
+                        : colors.black,
+                  }
             }
           >
             {day}
