@@ -1,1 +1,1 @@
-export type {WeekType} from './types'
+export type { WeekType } from './types';
