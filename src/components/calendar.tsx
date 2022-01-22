@@ -1,8 +1,21 @@
-import React, { FC, memo } from 'react';
+import React, { FC, memo, useState, useMemo, useCallback } from 'react';
 import { format } from 'date-fns';
-import { CalendarProps } from '../lib/types';
+import { CalendarProps, createWholeWeek } from '../lib';
+import { Header } from './header';
 import { View, FlatList } from 'react-native';
 
-export const CalendarComponent: FC<CalendarProps> = memo(({ date }) => {
-  return <View></View>;
-});
+export const CalendarComponent: FC<CalendarProps> = memo(
+  ({ date, language }) => {
+    const [selectedDate, setSelectedDate] = useState(date);
+    const getWholeWeek = useCallback(createWholeWeek, [createWholeWeek]);
+    const wholeWeek = useMemo(() => {
+      return getWholeWeek(selectedDate);
+    }, [selectedDate, getWholeWeek]);
+
+    return (
+      <View>
+        <Header language={language} />
+      </View>
+    );
+  },
+);

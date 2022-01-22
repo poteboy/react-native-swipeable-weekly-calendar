@@ -4,4 +4,8 @@ export type WeekItemProps = {
   date: Date;
 };
 
-export type CalendarHeaderProps = {};
+export type CalendarHeaderProps = {
+  language: Language;
+};
+
+export type Language = 'ja' | 'en';
