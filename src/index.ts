@@ -1,1 +1,2 @@
-export type {WeekType} from './types'
+import { CalendarComponent } from './components/calendar';
+export default CalendarComponent;
