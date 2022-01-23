@@ -9,6 +9,18 @@
   "author": "poteboy",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poteboy/react-native-swipeable-weekly-calendar.git"
+  },
+  "keywords": [
+    "react-native",
+    "calendar"
+  ],
+  "bugs": {
+    "url": "https://github.com/poteboy/react-native-swipeable-weekly-calendar/issues"
+  },
+  "homepage": "https://github.com/poteboy/react-native-swipeable-weekly-calendar#readme",
   "scripts": {
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "prepare": "bob build",
