@@ -1,6 +1,6 @@
 # react-native-swipeable-weekly-calendar
 
-![GIF](https://github.com/poteboy/react-native-swipeable-weekly-calendar/tree/development/Example/showoff.gif)
+![GIF](https://user-images.githubusercontent.com/59927325/150681203-3543a806-2b7d-47b7-b1bc-6f21063d0c43.gif)
 
 ## Component API
 
