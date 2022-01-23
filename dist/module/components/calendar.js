@@ -10,7 +10,8 @@ export const CalendarComponent = /*#__PURE__*/memo(_ref => {
     language,
     onPressDate,
     selectedColor,
-    showMonth
+    showMonth,
+    shadow
   } = _ref;
   const showHeader = showMonth !== null && showMonth !== void 0 ? showMonth : true;
   const [selectedDate, setSelectedDate] = useState(date); // to get current page's month
@@ -60,11 +61,15 @@ export const CalendarComponent = /*#__PURE__*/memo(_ref => {
     });
   }, [createLocalWeek, appearDate]);
   return /*#__PURE__*/React.createElement(View, {
-    style: {
+    style: shadow ? {
       backgroundColor: colors.white,
       paddingTop: 5,
       paddingBottom: 10,
       ...styles.shadow
+    } : {
+      backgroundColor: colors.white,
+      paddingTop: 5,
+      paddingBottom: 10
     }
   }, showHeader && /*#__PURE__*/React.createElement(View, {
     style: {

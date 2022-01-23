@@ -27,7 +27,7 @@ import { View, FlatList, unstable_batchedUpdates, Text } from 'react-native';
 import { format } from 'date-fns';
 
 export const CalendarComponent: FC<CalendarProps> = memo(
-  ({ date, language, onPressDate, selectedColor, showMonth }) => {
+  ({ date, language, onPressDate, selectedColor, showMonth, shadow }) => {
     const showHeader = showMonth ?? true;
     const [selectedDate, setSelectedDate] = useState(date);
     // to get current page's month
@@ -83,12 +83,20 @@ export const CalendarComponent: FC<CalendarProps> = memo(
 
     return (
       <View
-        style={{
-          backgroundColor: colors.white,
-          paddingTop: 5,
-          paddingBottom: 10,
-          ...styles.shadow,
-        }}
+        style={
+          shadow
+            ? {
+                backgroundColor: colors.white,
+                paddingTop: 5,
+                paddingBottom: 10,
+                ...styles.shadow,
+              }
+            : {
+                backgroundColor: colors.white,
+                paddingTop: 5,
+                paddingBottom: 10,
+              }
+        }
       >
         {showHeader && (
           <View style={{ alignSelf: 'center', paddingVertical: 10 }}>

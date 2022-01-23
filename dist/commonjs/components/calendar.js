@@ -27,7 +27,8 @@ const CalendarComponent = /*#__PURE__*/(0, _react.memo)(_ref => {
     language,
     onPressDate,
     selectedColor,
-    showMonth
+    showMonth,
+    shadow
   } = _ref;
   const showHeader = showMonth !== null && showMonth !== void 0 ? showMonth : true;
   const [selectedDate, setSelectedDate] = (0, _react.useState)(date); // to get current page's month
@@ -77,11 +78,15 @@ const CalendarComponent = /*#__PURE__*/(0, _react.memo)(_ref => {
     });
   }, [_lib.createLocalWeek, appearDate]);
   return /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: {
+    style: shadow ? {
       backgroundColor: _lib.colors.white,
       paddingTop: 5,
       paddingBottom: 10,
       ..._lib.styles.shadow
+    } : {
+      backgroundColor: _lib.colors.white,
+      paddingTop: 5,
+      paddingBottom: 10
     }
   }, showHeader && /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: {

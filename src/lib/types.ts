@@ -12,6 +12,7 @@ export type DefalultProps = {
   selectedColor?: string;
   onPressDate: (d: Date) => void;
   showMonth?: boolean;
+  shadow?: boolean;
 };
 
 export type CalendarHeaderProps = {
