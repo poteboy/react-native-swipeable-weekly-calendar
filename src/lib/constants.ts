@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
     borderColor: 'transparent',
     minWidth: 40,
+    textAlign: 'center',
   },
   shadow: {
     shadowColor: colors.shadowColor,

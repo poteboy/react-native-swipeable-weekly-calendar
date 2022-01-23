@@ -97,6 +97,7 @@ export const CalendarComponent: FC<CalendarProps> = memo(
         )}
         <Header language={language} />
         <FlatList
+          ref={flatListRef}
           data={weeks}
           extraData={selectedDate}
           initialScrollIndex={14}
