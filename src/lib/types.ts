@@ -15,7 +15,7 @@ export type DefalultProps = {
 };
 
 export type CalendarHeaderProps = {
-  language: Language;
+  language?: Language;
 };
 
 export type Language = 'ja' | 'en' | 'ko' | 'es';

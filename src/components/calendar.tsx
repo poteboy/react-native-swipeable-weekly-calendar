@@ -85,6 +85,7 @@ export const CalendarComponent: FC<CalendarProps> = memo(
       <View
         style={{
           backgroundColor: colors.white,
+          paddingTop: 5,
           paddingBottom: 10,
           ...styles.shadow,
         }}
@@ -96,6 +97,7 @@ export const CalendarComponent: FC<CalendarProps> = memo(
         )}
         <Header language={language} />
         <FlatList
+          ref={flatListRef}
           data={weeks}
           extraData={selectedDate}
           initialScrollIndex={14}
