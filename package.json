@@ -1,6 +1,6 @@
 {
   "name": "react-native-swipeable-weekly-calendar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "0.0.1",
   "main": "dist/module/index.js",
   "module": "dist/module/index.js",
