@@ -10,10 +10,36 @@
 $ npm install react-native-swipeable-weekly-calendar
 ```
 
-or 
+or
 
 ```sh
 $ yarn add react-native-swipeable-weekly-calendar
+```
+
+## Usage
+
+```ts
+export const App: FC = () => {
+  const [date, setDate] = useState(new Date());
+
+  const pressDate = useCallback(
+    (d: Date) => {
+      setDate(d);
+    },
+    [setDate],
+  );
+
+  return (
+    <View>
+      <CalendarComponent
+        date={date}
+        onPressDate={pressDate}
+        showMonth
+        language="ja" // ja | en | ko | es
+      />
+    </View>
+  );
+};
 ```
 
 ## Component API
